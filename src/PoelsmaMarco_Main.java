@@ -10,7 +10,12 @@ public class PoelsmaMarco_Main {
         try {
             File file = new File("lib/characters-one-piece.csv");
             Scanner scanner = new Scanner(file);
+            int i = 0;
             while (scanner.hasNextLine()) {
+                if (i == 0) {
+                    i++;
+                    continue;
+                }
                 String[] line = scanner.nextLine().split("&");
                 characters.add(new PoelsmaMarco_Character(
                         line[0],
@@ -33,7 +38,12 @@ public class PoelsmaMarco_Main {
         try {
             File file = new File("lib/characters-one-piece.csv");
             Scanner scanner = new Scanner(file);
+            int i = 0;
             while (scanner.hasNextLine()) {
+                if (i == 0) {
+                    i++;
+                    continue;
+                }
                 String[] line = scanner.nextLine().split(";");
                 characters.add(new PoelsmaMarco_Character(
                         line[0],

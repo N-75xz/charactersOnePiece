@@ -10,27 +10,25 @@ public class PoelsmaMarco_Main {
         try {
             File file = new File("lib/characters-one-piece.csv");
             Scanner scanner = new Scanner(file);
-            int i = 0;
+            if (scanner.hasNextLine()) {
+            scanner.nextLine(); // Skip the first line
+            }
             while (scanner.hasNextLine()) {
-                if (i == 0) {
-                    i++;
-                    continue;
-                }
-                String[] line = scanner.nextLine().split("&");
-                characters.add(new PoelsmaMarco_Character(
-                        line[0],
-                        Integer.parseInt(line[1]),
-                        Integer.parseInt(line[2]),
-                        Year.parse(line[3]),
-                        line[4]
-                ));
+            String[] line = scanner.nextLine().split("&");
+            characters.add(new PoelsmaMarco_Character(
+                line[0],
+                Integer.parseInt(line[1]),
+                Integer.parseInt(line[2]),
+                Year.parse(line[3]),
+                line[4]
+            ));
             }
             scanner.close();
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
             for (PoelsmaMarco_Character character : characters) {
-                System.out.println(character);
+            System.out.println(character);
             }
             System.out.println("Total characters: " + characters.size());
         }
@@ -38,12 +36,10 @@ public class PoelsmaMarco_Main {
         try {
             File file = new File("lib/characters-one-piece.csv");
             Scanner scanner = new Scanner(file);
-            int i = 0;
+            if (scanner.hasNextLine()) {
+                scanner.nextLine(); // Skip the first line
+            }
             while (scanner.hasNextLine()) {
-                if (i == 0) {
-                    i++;
-                    continue;
-                }
                 String[] line = scanner.nextLine().split(";");
                 characters.add(new PoelsmaMarco_Character(
                         line[0],

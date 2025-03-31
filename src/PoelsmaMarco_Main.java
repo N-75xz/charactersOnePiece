@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import models.PoelsmaMarco_Character;
 import java.io.File;
-import java.time.Year;
 public class PoelsmaMarco_Main {
     public static ArrayList<PoelsmaMarco_Character> characters = new ArrayList<>();
     public static void main (String[] args) {
@@ -19,7 +18,7 @@ public class PoelsmaMarco_Main {
                 line[0],
                 Integer.parseInt(line[1]),
                 Integer.parseInt(line[2]),
-                Year.parse(line[3]),
+                line[3],
                 line[4]
             ));
             }
@@ -45,7 +44,7 @@ public class PoelsmaMarco_Main {
                         line[0],
                         Integer.parseInt(line[1]),
                         Integer.parseInt(line[2]),
-                        Year.parse(line[3]),
+                        line[3],
                         line[4]
                 ));
             }

@@ -1,14 +1,13 @@
 package models;
 
-import java.time.Year;
 public class PoelsmaMarco_Character {
     private String name;
     private int chapter;
     private int episode;
-    private Year year;
+    private String year;
     private String note;
 
-    public PoelsmaMarco_Character(String name, int chapter, int episode, Year year, String note) {
+    public PoelsmaMarco_Character(String name, int chapter, int episode, String year, String note) {
         this.name = name;
         this.chapter = chapter;
         this.episode = episode;
@@ -33,10 +32,10 @@ public class PoelsmaMarco_Character {
     public void setEpisode(int episode) {
         this.episode = episode;
     }
-    public Year getYear() {
+    public String getYear() {
         return year;
     }
-    public void setYear(Year year) {
+    public void setYear(String year) {
         this.year = year;
     }
     public String getNote() {
